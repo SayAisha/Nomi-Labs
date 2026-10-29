@@ -21,8 +21,11 @@ public class LabsNetworkHandler {
         registerMessage(0, CanEditChunkDataMessage.MessageHandler.class, CanEditChunkDataMessage.class);
         registerMessage(1, LabsDifficultyChangeMessage.MessageHandler.class, LabsDifficultyChangeMessage.class);
 
-        if (Loader.isModLoaded(LabsValues.AE2_MODID))
+        if (Loader.isModLoaded(LabsValues.AE2_MODID)) {
             registerMessage(2, LabsP2PCycleMessage.MessageHandler.class, LabsP2PCycleMessage.class);
+            registerMessage(10, LabsMaxCraftMessage.MessageHandler.class, LabsMaxCraftMessage.class);
+            registerMessage(11, LabsMaxCraftResultMessage.MessageHandler.class, LabsMaxCraftResultMessage.class);
+        }
 
         if (Loader.isModLoaded(LabsValues.BETTER_P2P_MODID)) {
             registerMessage(3, LabsP2PChangeTypeMessage.MessageHandler.class, LabsP2PChangeTypeMessage.class);

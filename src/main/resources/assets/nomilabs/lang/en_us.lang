@@ -804,3 +804,6 @@ tooltip.nomilabs.universal_crystallizer.description=§8An immense device, capabl
 tooltip.nomilabs.universal_crystallizer.description_laser=Can use §bLaser Hatches§r
 tooltip.nomilabs.dme_sim_chamber.description=§8A high powered simulation device, capable of performing more complex simulations faster than ever.§r
 tooltip.nomilabs.growth_chamber.description=§8A high powered UV ray chamber, capable of mass-growing even the most incomprehensible plants.§r
+
+# Max Craft
+labs.max_craft.max=Max
