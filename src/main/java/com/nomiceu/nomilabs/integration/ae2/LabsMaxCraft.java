@@ -16,6 +16,12 @@ import net.minecraft.world.WorldServer;
 
 import org.lwjgl.input.Keyboard;
 
+import com.google.common.collect.Sets;
+import com.nomiceu.nomilabs.network.LabsMaxCraftMessage;
+import com.nomiceu.nomilabs.network.LabsMaxCraftResultMessage;
+import com.nomiceu.nomilabs.network.LabsNetworkHandler;
+import com.nomiceu.nomilabs.util.LabsTranslate;
+
 import appeng.api.AEApi;
 import appeng.api.networking.IGrid;
 import appeng.api.networking.crafting.ICraftingCallback;
@@ -34,12 +40,6 @@ import appeng.parts.reporting.PartExpandedProcessingPatternTerminal;
 import appeng.parts.reporting.PartPatternTerminal;
 import appeng.parts.reporting.PartTerminal;
 import appeng.util.Platform;
-
-import com.google.common.collect.Sets;
-import com.nomiceu.nomilabs.network.LabsMaxCraftMessage;
-import com.nomiceu.nomilabs.network.LabsMaxCraftResultMessage;
-import com.nomiceu.nomilabs.network.LabsNetworkHandler;
-import com.nomiceu.nomilabs.util.LabsTranslate;
 
 /**
  * Adds Max Craft to the Craft Amount Screen, see Nomi-CEu/Nomi-CEu#1576.
@@ -150,6 +150,7 @@ public class LabsMaxCraft {
             what.setStackSize(amount);
             ICraftingGrid crafting = grid.getCache(ICraftingGrid.class);
             crafting.beginCraftingJob(world, grid, src, what, new ICraftingCallback() {
+
                 @Override
                 public void calculationComplete(ICraftingJob job) {
                     if (job.isSimulation()) {

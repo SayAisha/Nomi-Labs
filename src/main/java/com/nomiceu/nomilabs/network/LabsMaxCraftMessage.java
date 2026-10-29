@@ -1,7 +1,5 @@
 package com.nomiceu.nomilabs.network;
 
-import io.netty.buffer.ByteBuf;
-
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
@@ -10,6 +8,8 @@ import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.nomiceu.nomilabs.integration.ae2.LabsMaxCraft;
+
+import io.netty.buffer.ByteBuf;
 
 public class LabsMaxCraftMessage implements IMessage {
 
